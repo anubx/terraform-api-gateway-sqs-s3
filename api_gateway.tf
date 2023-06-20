@@ -57,6 +57,7 @@ resource "aws_api_gateway_method_settings" "log_settings" {
     data_trace_enabled = false
     metrics_enabled = false
   }
+  depends_on = [aws_api_gateway_account.demo]
 }
 
 resource "aws_api_gateway_deployment" "deploy" {
